@@ -142,8 +142,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   i3bar_command i3bar
- #  status_command /usr/bin/i3blocks -c /home/krish/.config/i3/i3blocks.conf
-  status_command /usr/bin/i3blocks
+  status_command i3blocks -c /home/krish/.config/i3/i3blocks.conf 
   position top
   font pango:SauceCodePro Nerd Font 14
   strip_workspace_numbers yes
@@ -235,7 +234,7 @@ exec --no-startup-id xcalib -d :0 /home/krish/.color/icc/Seiko.icc
 bindsym $mod+y move workspace to output left
 
 # Colors
-client.focused          #c6ff00 #c6ff00 #000000 #dddddd
+client.focused          #ea1616 #ea1616 #000000 #dddddd
 client.focused_inactive #333333 #333333 #c6ff00 #ffffff
 client.unfocused        #333333 #333333 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
