@@ -83,7 +83,7 @@ set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace8 "8: "
 set $workspace9 "9: "
-set $workspace10 "10: "
+set $workspace10 "10:  "
 set $binfolder "~/.i3/bin"
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
@@ -224,7 +224,7 @@ bindsym $mod+t exec i3-input -F 'rename workspace to %s' -P 'New name: '
 bindsym $mod+Shift+Tab exec screen -S cmus -d -m cmus && pkill --signal SIGRTMIN+13 i3blocks
 
 # Compositing Manager
-exec --no-startup-id compton -b
+exec_always --no-startup-id compton -b
 # Tiling Window Manager Notification Daemon
 exec --no-startup-id twmnd
 # Set color Profile
