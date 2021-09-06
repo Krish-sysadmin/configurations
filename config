@@ -18,7 +18,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Shift+Return exec gnome-terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -145,7 +145,7 @@ bar {
   status_command i3blocks -c /home/krish/.config/i3/i3blocks.conf 
   position top
   font pango:SauceCodePro Nerd Font 14
-  strip_workspace_numbers yes
+  strip_workspace_numbers no
   separator_symbol "-"
   workspace_buttons yes
   bindsym button4 nop
@@ -261,3 +261,12 @@ exec --no-startup-id i3-msg 'workspace 2: '
 exec screen -S cmus -d -m cmus && sleep 5 && pkill --signal SIGRTMIN+13 i3blocks
 
 exec --no-startup-id vmware-user
+
+
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
