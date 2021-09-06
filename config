@@ -224,6 +224,7 @@ bindsym $mod+t exec i3-input -F 'rename workspace to %s' -P 'New name: '
 bindsym $mod+Shift+Tab exec screen -S cmus -d -m cmus && pkill --signal SIGRTMIN+13 i3blocks
 
 # Compositing Manager
+exec_always --no-startup-id "pkill compton"
 exec_always --no-startup-id compton -b
 # Tiling Window Manager Notification Daemon
 exec --no-startup-id twmnd
