@@ -200,7 +200,8 @@ mode "$mode_system" {
 bindsym $mod+Alt_R mode "$mode_system"
 
 # Set background
-exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id "kill $(ps aux | grep 'feh' | awk '{print $2}')"
+exec_always --no-startup-id "while true; do feh --randomize --bg-fill ~/wallpapers/wallpapers/; sleep 600; done &"
 # Capslock is control
 exec --no-startup-id xmodmap ~/.Xmodmap
 # run special warning script
